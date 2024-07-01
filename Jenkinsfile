@@ -7,6 +7,12 @@ pipeline {
                 echo 'Hello from Git'
             }
         }
+	stage('print') {
+            steps {
+                echo 'Hello from ${name}'
+            }
+        }
+
     }
 }
 
