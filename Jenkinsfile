@@ -9,7 +9,7 @@ pipeline {
         }
 	stage('print') {
             steps {
-                echo 'Hello from ${name}'
+                echo "Hello from $name"
             }
         }
 
