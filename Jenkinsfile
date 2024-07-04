@@ -12,6 +12,11 @@ pipeline {
                 echo "Hello from $name"
             }
         }
+       stage('auto') {
+            steps {
+                echo "Automation"
+            }
+        }
 
     }
 }
