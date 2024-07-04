@@ -14,7 +14,7 @@ pipeline {
         }
        stage('auto') {
             steps {
-                echo "Automation"
+                echo "Automation 2"
             }
         }
 
