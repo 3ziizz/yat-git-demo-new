@@ -19,6 +19,7 @@ pipeline {
         stage('build') {
             steps {
              	sh 'docker ps'
+		sh 'docker ps --format "{{.Names}}"'
 		script {
             		def existingContainers = sh(
                			 script: 'docker ps --format "{{.Names}}"',
