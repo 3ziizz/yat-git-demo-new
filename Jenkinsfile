@@ -16,6 +16,13 @@ pipeline {
                 echo "Automation 2"
             }
         }
+        stage('build') {
+            steps {
+		docker ps
+                docker compose up -d
+		docker ps
+            }
+        }
 
     }
 }
