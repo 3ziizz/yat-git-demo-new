@@ -19,7 +19,7 @@ pipeline {
         stage('build') {
             steps {
              	sh 'docker ps'
-        	sh 'docker-compose up -d'
+        	sh 'docker compose up -d'
         	sh 'docker ps'
 	    }
         }
