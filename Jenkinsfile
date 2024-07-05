@@ -19,7 +19,21 @@ pipeline {
         stage('build') {
             steps {
              	sh 'docker ps'
-        	sh 'docker compose up -d'
+		script {
+            		def existingContainers = sh(
+               			 script: 'docker ps --format "{{.Names}}"',
+                		 returnStdout: true
+            			).trim()
+            
+            		if (existingContainers.contains('mongo-express') &&
+                		existingContainers.contains('mongodb')) {
+                		echo 'Containers already exist'
+            		}else{
+				sh 'docker compose up -d'
+			}
+		
+        	}
+        	
         	sh 'docker ps'
 	    }
         }
