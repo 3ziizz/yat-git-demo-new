@@ -18,10 +18,10 @@ pipeline {
         }
         stage('build') {
             steps {
-		docker ps
-                docker compose up -d
-		docker ps
-            }
+             	sh 'docker ps'
+        	sh 'docker-compose up -d'
+        	sh 'docker ps'
+	    }
         }
 
     }
