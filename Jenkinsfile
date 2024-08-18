@@ -17,7 +17,7 @@ pipeline {
                 echo "Automation 2"
             }
         }
-        stage('build') {
+/*        stage('build') {
             steps {
              	sh 'docker ps'
 		sh 'docker ps --format "{{.Names}}"'
@@ -38,7 +38,7 @@ pipeline {
         	
         	sh 'docker ps'
 	    }
-        }
+        }*/
 
     }
 }
